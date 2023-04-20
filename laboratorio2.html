@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 2</title>
+</head>
+
+<body>
+    <h1>¿Qué es Javascript y en qué se asemeja a Java?</h1>
+
+    <p>
+        Java es un lenguaje de programación orientado a objetos puros mientras que JavaScript
+        está basado en prototipos, aunque tiene la capacidad de emular la programación orientada
+        a objetos. Java es un lenguaje compilado y JavaScript interpretado.
+    </p>
+
+    <h2>1</h2>
+    <h3> Ingrese 2 numeros</h3>
+    <input id="n1" type="number" placeholder="Primer numero">
+    <input id="n2" type="number" placeholder="Segundo numero">
+    <button onclick="calcular()">Calcular</button>
+
+    <script>
+        //Leer los datos de los inputs y mostrarlos en consola
+
+        function calcular() {
+            var n1 = document.getElementById("n1");
+            var n2 = document.getElementById("n2");
+
+            if (n1.value == "" || n2.value == "") {
+                alert("Ingrese los dos numeros");
+                return;
+            }
+            //sumar, restar, multiplicar y dividir los numeros
+
+            console.log("Suma: " + (parseInt(n1.value) + parseInt(n2.value)));
+            console.log("Resta: " + (parseInt(n1.value) - parseInt(n2.value)));
+            console.log("Multiplicacion: " + (parseInt(n1.value) * parseInt(n2.value)));
+            console.log("Division: " + (parseInt(n1.value) / parseInt(n2.value)));
+
+        }
+    </script>
+
+    <h2>2</h2>
+
+    <label id="concat"></label>
+
+    <script>
+        let nombre = "Juan";
+        let apellido = "Perez";
+        console.log(nombre + " " + apellido);
+
+        document.getElementById("concat").innerHTML = nombre + " " + apellido;
+
+    </script>
+
+    <h2>3</h2>
+
+    <label id="mostrar"></label>
+
+    <script>
+        const name = "Juan";
+        const edad = 20;
+
+        console.log(typeof nombre);
+        console.log(typeof edad);
+
+        document.getElementById("mostrar").innerHTML = "Nombre: " + name + ", Edad: " + edad;
+    </script>
+
+    <h2>4</h2>
+
+    <script>
+        const objeto = {
+            numero: 1,
+            texto: "Hola",
+            booleano: true,
+            objeto: {}
+        }
+        console.log(objeto);
+        document.write(objeto.numero + "<br>");
+        document.write(objeto.texto + "<br>");
+        document.write(objeto.booleano + "<br>");
+        document.write(objeto.objeto + "<br>");
+
+    </script>
+
+
+</body>
+
+</html>
