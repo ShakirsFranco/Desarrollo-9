@@ -88,6 +88,33 @@
 
     </script>
 
+    <h2>5</h2>
+
+    <h2 id="suma"> Ingrese un numero </h2>
+    <input id="numero" type="number" placeholder="Ingrese un numero">
+    <button onclick="sumar()">Sumar</button>
+
+
+    <script>
+        function sumar(numero) {
+            var numero = document.getElementById("numero");
+
+            if (numero.value == "" || numero.value < 0) {
+                alert("Ingrese un numero mayor a 0");
+            } else {
+
+                var suma = 0;
+                for (var i = 0; i <= numero.value - 1; i++) {
+                    if (i % 3 == 0 || i % 5 == 0) {
+                        suma += i;
+                    }
+                }
+                document.getElementById("suma").innerHTML = "La suma es: " + suma;
+            }
+        }
+    </script>
+
+
 
 </body>
 
