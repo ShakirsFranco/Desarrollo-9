@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de formulario</title>
+</head>
+
+<body>
+    */ formaulario para capturar datos de un usuarios en Javascript
+
+    <form action="">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" placeholder="Ingrese su nombre">
+
+        <label for="lastname">Apellido</label>
+        <input type="text" id="lastname" placeholder="Ingrese su apellido">
+
+
+        <button onclick="enviar()">Enviar</button>
+
+
+
+    </form>
+
+
+    <h1 id="nombree"></h1>
+
+    <script>
+
+        function enviar() {
+            let nombre = document.getElementById("name").value;
+            let apellido = document.getElementById("lastname").value;
+
+            if (nombre == "" || apellido == "") {
+                alert("Ingrese todos los datos");
+                return;
+            }
+
+            console.log("Nombre: " + nombre);
+            console.log("Apellido: " + apellido);
+
+            document.getElementById("nombree").innerHTML = nombre + " " + apellido;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
